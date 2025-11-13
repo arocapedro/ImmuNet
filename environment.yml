@@ -1,0 +1,29 @@
+name: immunet
+channels:
+  - defaults
+dependencies:
+  - pip=24.2
+  - python=3.12.8
+  - pip:
+      - black==24.10.0
+      - csbdeep==0.8.1
+      - imagecodecs==2024.9.22
+      - imageio==2.36.1
+      - matplotlib==3.10.0
+      - multiprocess==0.70.17
+      - numpy==2.2.0
+      - pandas==2.2.3
+      - pillow==11.0.0
+      - pre-commit==4.0.1
+      - pymongo==4.10.1
+      - requests==2.32.3
+      - scikit-image==0.25.0
+      - scikit-learn==1.6.0
+      - scipy==1.14.1
+      - setuptools==75.6.0
+      - tensorboard==2.18.0
+      - tifffile==2024.12.12
+      - torch==2.5.1
+      - torchvision==0.20.1
+      - tqdm==4.67.1
+      - werkzeug==3.1.3
