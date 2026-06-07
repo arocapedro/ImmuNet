@@ -45,6 +45,8 @@ conda activate immunet
 
 The `environment.yml` pins PyTorch 2.5.1, torchvision 0.20.1, and a current numpy/scipy/pandas/scikit-* stack. Install the appropriate CUDA wheels for your system (`environment.yml` will pull the default CPU/CUDA build that pip resolves; users who need a specific CUDA toolkit should install PyTorch from the [official selector](https://pytorch.org/get-started/locally/) instead).
 
+> **Note.** Conda is the supported install path for this fork. The legacy `requirements.txt`, `Dockerfile`, and `scripts/docker/` helpers from upstream were tied to TensorFlow 1.14 and have been removed.
+
 ---
 
 ## Quick start
@@ -301,7 +303,6 @@ data/
   tilecache/           # (you provide) per-dataset/slide/tile imagery
 
 paper/                 # reproduction scripts for the paper splits
-scripts/docker/        # legacy docker helper scripts (TF era)
 immunet_zenodo.pth     # converted PyTorch checkpoint of the published model
 environment.yml        # conda environment for the PyTorch port
 CHANGELOG.md           # full change log vs. upstream

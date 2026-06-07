@@ -68,10 +68,10 @@ This release is a ground-up rewrite of the model and training pipeline on top of
 - TensorFlow 1.x / Keras 2.x model definitions (`model_for_training`, `model_for_inference`) and the `compress_model` HDF5 utility.
 - Legacy `csbdeep==0.6.0`, `bson`, `h5py==2.10.0`, and `tensorflow-gpu` pins.
 - The `--max_patch` flag (renamed to `--max_examples_per_tile`).
+- **The legacy `Dockerfile`, `requirements.txt`, and `scripts/docker/` helpers.** They were tied to the TensorFlow 1.14 base image and the original CLI shape, and are not compatible with the PyTorch 2.5 / Python 3.12 codebase. Conda + `environment.yml` is now the supported install path.
 
 ### Known caveats / not yet updated
 
-- `requirements.txt` and `Dockerfile` still reflect the original TensorFlow 1.14 stack and are **out of date** with the rest of the repository. Use `environment.yml` (conda) until they are refreshed; the Docker image will need to be rebuilt against a PyTorch base.
 - The `tests/` directory and its `test_panels.py` suite from the upstream repository are not present in this fork.
 - The optional `n_rays` polygon-distance head and the `ResImmuNet` backbone are scaffolded but commented out (`TODO: enable RAYS`).
 
